@@ -26,7 +26,7 @@ function playRound(humanSelection,computerSelection){
             console.log('Paper beast Rock! You Win');
             humanScore++;
         }
-        else if (humanChoice === 'scisscors'){
+        else if (humanChoice === 'scissors'){
             console.log('rock beast scissors. You lost!');
             computerScore++;
         }
