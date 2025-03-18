@@ -56,7 +56,7 @@ function playGame(){
              console.log('rock beats scissors. You Won!')
              humanScore++;
          }
-         if (humanChoice === 'paper'){
+         else if (humanChoice === 'paper'){
              console.log('scissors beats paper. You lost!')
              computerScore++;
          }
