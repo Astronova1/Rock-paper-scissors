@@ -62,5 +62,10 @@ function playRound(humanSelection,computerSelection){
    }
 }
 
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
+function playGame(){
+    
+}
