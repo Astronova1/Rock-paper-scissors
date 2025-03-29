@@ -1,5 +1,5 @@
 
-function getComputerChoice(){                   //this function return rock paper of scissor 
+function getComputerChoice(){                   
    let choice = Math.floor(Math.random() * 3);
    if (choice === 1){
     return 'rock';
@@ -20,10 +20,10 @@ function getHumanChoice(){
 let humanSelection;
 let computerSelection;
 
-function playGame(){
-    let humanScore = 0 , computerScore = 0;
 
-    function playRound(humanSelection,computerSelection){
+    let humanScore = 0 , computerScore = 0;
+    function playRound(humanSelection){
+        computerSelection = getComputerChoice();
         let humanChoice = humanSelection.toLowerCase();
         if (computerSelection=== 'rock'){
              if (humanChoice === 'paper'){
@@ -66,11 +66,6 @@ function playGame(){
         }
     }
 
-    for (let i=0; i< 5 ; i++){
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();
-        playRound(humanSelection,computerSelection);
-    }
     if (humanScore > computerScore){
         console.log('You won the Game!')
     }
@@ -80,8 +75,18 @@ function playGame(){
     else {
         console.log('Nobody won this Game')
     }
-    
-}
 
+    const rbtn = document.querySelector("#rock");
+    rbtn.addEventListener("click", () => {
+        playRound("rock");
+    });
 
-playGame();
+     const pbtn = document.querySelector("#paper");
+     pbtn.addEventListener("click", () => {
+        playRound("paper"); 
+     });
+
+     const sbtn = document.querySelector("#scissors");
+     sbtn.addEventListener("click", () => {
+        playRound("scissors");
+     });
