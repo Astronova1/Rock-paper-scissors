@@ -102,4 +102,17 @@ document.body.appendChild(div);
 
 const result = document.querySelector(".result");
 const scDiv = document.createElement("div");
-result.appendChild(scDiv); 
+document.body.appendChild(scDiv); 
+
+function updateScore(){
+    scDiv.innerText = "Your Score: " + humanScore + ' | ' + "Computer Score: " + computerScore;
+    console.log("it is running");
+}
+
+rbtn.addEventListener("click", () => updateScore());
+
+
+pbtn.addEventListener("click", () => updateScore());
+
+
+sbtn.addEventListener("click", () => updateScore());
