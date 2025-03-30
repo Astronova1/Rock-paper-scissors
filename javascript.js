@@ -76,9 +76,6 @@ let computerSelection;
             else if (computerScore > humanScore){
                 div.innerText = 'The Computer Won the Game';
             }
-            else {
-                div.innerText = 'Nobody won this Game'; 
-            }
         }
     }
 
