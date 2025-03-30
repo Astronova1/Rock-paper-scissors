@@ -106,7 +106,6 @@ document.body.appendChild(scDiv);
 
 function updateScore(){
     scDiv.innerText = "Your Score: " + humanScore + ' | ' + "Computer Score: " + computerScore;
-    console.log("it is running");
 }
 
 rbtn.addEventListener("click", () => updateScore());
