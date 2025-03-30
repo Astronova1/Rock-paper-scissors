@@ -65,19 +65,23 @@ let computerSelection;
             }
         }
         round++;
+
+        if (humanScore === 5 || computerScore === 5 ){
+            const div = document.createElement("div");
+            div.classList.add("final");
+            document.body.appendChild(div);
+            if (humanScore > computerScore){
+                div.innerText = 'You won the Game!';
+            }
+            else if (computerScore > humanScore){
+                div.innerText = 'The Computer Won the Game';
+            }
+            else {
+                div.innerText = 'Nobody won this Game'; 
+            }
+        }
     }
 
-    if (round){
-        if (humanScore > computerScore){
-            console.log('You won the Game!')
-        }
-        else if (computerScore > humanScore){
-            console.log('The Computer Won the Game')
-        }
-        else {
-            console.log('Nobody won this Game')
-        }
-    }
 
         const rbtn = document.querySelector("#rock");
         rbtn.addEventListener("click", () => {
