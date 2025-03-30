@@ -29,50 +29,42 @@ let computerSelection;
              if (humanChoice === 'paper'){
                  div.textContent = 'Paper beast Rock! You Win';
                  humanScore++;
-                 round++;
              }
              else if (humanChoice === 'scissors'){
                  div.textContent = 'rock beast scissors. You lost!';
                  computerScore++;
-                 round++;
              }
              else{
                  div.textContent = 'It\'s a tie';
-                 round++;
              }
         }
         else if (computerSelection === 'paper'){
          if (humanChoice === 'rock'){
              div.textContent = 'paper beats rock. You Lost!';
              computerScore++;
-             round++;
          }
          else if (humanChoice === 'scissors'){
              div.textContent = 'scissors beats paper. You won!';
              humanScore++;
-             round++;
          }
          else {
              div.textContent = "It's a tie";
-             round++;
          }
         }
         else if (computerSelection === 'scissors'){
          if (humanChoice === 'rock'){
              div.textContent = 'rock beats scissors. You Won!';
              humanScore++;
-             round++;
          }
          else if (humanChoice === 'paper'){
              div.textContent = 'scissors beats paper. You lost!';
              computerScore++;
-             round++;
          }
          else {
              div.textContent = 'It\'s a tie';
-             round++;
             }
         }
+        round++;
     }
 
     if (round){
@@ -86,7 +78,7 @@ let computerSelection;
             console.log('Nobody won this Game')
         }
     }
-    
+
         const rbtn = document.querySelector("#rock");
         rbtn.addEventListener("click", () => {
             playRound("rock");
@@ -107,3 +99,7 @@ let computerSelection;
 const div = document.createElement("div");
 div.classList.add("result");
 document.body.appendChild(div);
+
+const result = document.querySelector(".result");
+const scDiv = document.createElement("div");
+result.appendChild(scDiv); 
